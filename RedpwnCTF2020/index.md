@@ -13,12 +13,12 @@
 |`Rev`|[bubbly]|
 
 
-[coffer-overflow-0]: <https://github.com/Yankoo458/CTF-writeups/blob/master/RedpwnCTF2020/pwn/coffer-overflow-0/coffer-overflow-0.md>
+[coffer-overflow-0]: <pwn/coffer-overflow-0/coffer-overflow-0.md>
 
-[coffer-overflow-1]: <https://github.com/Yankoo458/CTF-writeups/blob/master/RedpwnCTF2020/pwn/coffer-overflow-1/coffer-overflow-1.md>
+[coffer-overflow-1]: <pwn/coffer-overflow-1/coffer-overflow-1.md>
 
-[coffer-overflow-2]: <https://github.com/Yankoo458/CTF-writeups/blob/master/RedpwnCTF2020/pwn/coffer-overflow-2/coffer-overflow-2.md>
+[coffer-overflow-2]: <pwn/coffer-overflow-2/coffer-overflow-2.md>
 
-[secret-flag]: <https://github.com/Yankoo458/CTF-writeups/blob/master/RedpwnCTF2020/pwn/secret-flag/secret-flag.md>
+[secret-flag]: <pwn/secret-flag/secret-flag.md>
 
-[bubbly]: <https://github.com/Yankoo458/CTF-writeups/blob/master/RedpwnCTF2020/rev/bubbly/bubbly.md>
+[bubbly]: <rev/bubbly/bubbly.md>
