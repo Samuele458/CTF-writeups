@@ -9,14 +9,15 @@ Files provided:
 
 Let's run `a.out`:
 
-foto
+
+![alt text](img/screen004.png?raw=true "radare2")
 
 As we can see execution never ends.
 
 So, what we can do is analyzing `a.out` with `radare2`.
 
 This is the `main`:
-foto
+![alt text](img/screen001.png?raw=true "radare2")
 
 We have to take a look at these instructions:
 ```sh
@@ -28,7 +29,7 @@ We have to take a look at these instructions:
 The return value of `sym.getKey` is passed to `sym.win`.
 
 `sym.getKey` probably performs computationally too long calculations to generate the key, but let's analyze this function to understand if we can discover the real key:
-foto
+![alt text](img/screen002.png?raw=true "radare2")
 
 We can see that there is a main loop. `var_8h` is the counter firstly initialyzed to 0, and incremented by 1 at each iteration.
 Take a look at the last 5 instructions:
@@ -44,7 +45,7 @@ The loop execution runs until the counter is below or equal `0x265d1d22`, so it 
 Because of, at the end of the function, `var_8h` is copied in `eax` and so returned, it means that the correct key value is `0x265d1d23`.
 
 Let's change execution with radare2:
-foto
+![alt text](img/screen003.png?raw=true "radare2")
 
 I used:
 * `aaa` to analyze the executable file
