@@ -10,7 +10,8 @@ In this program we have to enter the correct password.
 
 Let's analyze `mixer` with `r2`.
 The only function is `entry0`:
- IMG
+
+![alt text](img/screen_001.png?raw=true "r2")
  
 There aren't other functions...there is just other machine code next to `entry0` but it isn't so important, it's just I/O.
 
@@ -163,10 +164,13 @@ the code is too much, so I'll try to resume:
 1. many calculations have been made in the portion of memory in range `0x610171` - `0x610371`, and is calculated the real "encrypted" password (stored in 32 bytes starting from `0x610151`). It is: `0x84, 0xd3, 0xb8, 0xca, 0xe2, 0x36, 0x63, 0x17, 0xc5, 0xae, 0x30, 0x7f, 0xd5, 0xd9, 0x10, 0xcf, 0xfa, 0x41, 0x8a, 0xa0, 0xbb, 0x1d, 0xdb, 0x84, 0x62, 0xe2, 0xa6, 0x36, 0x1d, 0xb9, 0x1c, 0x8b`.
 2. 32 Byte of text (password) are requested in input. They are stored in `0x610771`.
 3. The entered password is ecrypted:
-IMG
 The Password is XORed with these bytes (32 bytes starting from `0x610271`): `0xf4, 0xbc, 0xcb, 0xaf, 0x8b, 0x52, 0x0c, 0x79, 0xbe, 0xcd, 0x00, 0x1b, 0xb0, 0x86, 0x7d, 0xa6, 0x82, 0x72, 0xf8, 0xda, 0xc1, 0x42, 0xba, 0xf6, 0x07, 0xbd, 0xd1, 0x05, 0x74, 0xcb, 0x78, 0xf6`.
 You can read these values by placing a breakpoint on `0x00610103` and looking at `dl` for every  iteration, as shown in figure:
-IMG
+
+
+![alt text](img/screen_002.png?raw=true "r2")
+
+
 4. The encrypted password entered by user is compared with the encrypted real password.
 
 So, we have:
