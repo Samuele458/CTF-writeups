@@ -48,7 +48,7 @@ The `syscall` number is `10`, so it is `mprotect`. Take a look at the `man`:
               The memory can be executed.
 ```
 
-Interesting, in this case `mprotect` is used to allow READ, WRITE, and EXECUTION in the block of memory from `0x600000` to `0x6fffff`. So, the real program is hide into this portion of memory located in `.stack` segment.
+Interesting, in this case `mprotect` is used to allow READ, WRITE, and EXECUTION in the block of memory from `0x600000` to `0x6fffff`. So, the real program is hidden into this portion of memory located in `.stack` segment.
 
 Then the execution flow is totally redirected to the hidden istructions (`0x610000`).
 Start analyzing them:
