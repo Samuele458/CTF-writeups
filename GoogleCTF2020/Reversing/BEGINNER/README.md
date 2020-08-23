@@ -49,7 +49,7 @@ Content of `SHUFFLE`
 ```
 It means that the element 0 is replaced with the one in position 2, etc...
 
-Then, the shuffled text is used in the `paddd`, so it is added to the content of `ADD32`.
+Then, the shuffled text is used in `paddd` operation, so it is added to the content of `ADD32`.
 Content of `ADD32`:
 ```sh
 ef be ad de ad de e1 fe 37 13 37 13 66 74 63 67
@@ -155,4 +155,4 @@ def getFlag():
 ```
 The string returned by `getFlag()` is `CTF{S1MDf0rM3!}`
 
-So, the correct flag is `CTF{S1MDf0rM3!}`. I checked it using [exploit.py](exploit.py)
+So, the correct flag is `CTF{S1MDf0rM3!}`. The whole procedure is resumed in [exploit.py](exploit.py).
