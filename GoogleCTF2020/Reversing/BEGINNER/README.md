@@ -155,4 +155,4 @@ def getFlag():
 ```
 The string returned by `getFlag()` is `CTF{S1MDf0rM3!}`
 
-So, the correct flag is `CTF{S1MDf0rM3!}`. I checked it using [exploit.py](python.py)
+So, the correct flag is `CTF{S1MDf0rM3!}`. I checked it using [exploit.py](exploit.py)
