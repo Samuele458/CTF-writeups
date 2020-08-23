@@ -37,7 +37,7 @@ e8b2ffffff     call sym.imp.__isoc99_scanf ; int scanf(const char *format)
 These are `SIMD` instructions (in this case, in `xmm0` is stored the flag entered by user). 
 
  1. `pshufb` performs a shuffle of all 16 bytes (`xmm0` is a 128-bit long register), using the second operand as a mask.
- 2.  `paddd` add the second operand to the first (destination), 32 bit at a time.
+ 2.  `paddd` adds the second operand to the first (destination), 32 bit at a time.
  3. `pxor` performs a bitwise xor of both operands and store the result to the first operand.
  4. `movaps`store the content of an `xmm` register to memory.
  
