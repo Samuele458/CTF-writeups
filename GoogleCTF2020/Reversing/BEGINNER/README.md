@@ -43,6 +43,7 @@ These are `SIMD` instructions (in this case, in `xmm0` is stored the flag entere
  
 
 So, the flag entered by user, is firstly shuffled using `SHUFFLE` as mask.
+
 Content of `SHUFFLE`
 ```sh
 02 06 07 01 05 0b 09 0e 03 0f 04 08 0a 0c 0d 00
@@ -50,12 +51,14 @@ Content of `SHUFFLE`
 It means that the element 0 is replaced with the one in position 2, etc...
 
 Then, the shuffled text is used in `paddd` operation, so it is added to the content of `ADD32`.
+
 Content of `ADD32`:
 ```sh
 ef be ad de ad de e1 fe 37 13 37 13 66 74 63 67
 ```
 
 and then the result is XORed with `XOR`:
+
 Content of `XOR`:
 ```sh
 76 58 b4 49 8d 1a 5f 38 d4 23 f8 34 eb 86 f9 aa
