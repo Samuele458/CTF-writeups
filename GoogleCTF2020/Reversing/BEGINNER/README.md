@@ -16,12 +16,12 @@ Flag: AAAAAAAAAAA
 FAILURE
 ```
 
-Let's analyze `a.out` with `radare2` and `ghidra`:
+Let's analyze `a.out` with `radare2`:
 ![r2](https://github.com/Samuele458/CTF-writeups/blob/master/GoogleCTF2020/Reversing/BEGINNER/img/screen_01.png?raw=true)
 
-Let's try to understand what does `main` do.
+Now, try to understand what does `main` do.
 
- The flag is stored in a string of 16 chars (15+end char): 
+ The flag is stored in a string of 16 chars (15+NULL terminator char): 
 ```sh
 0x000010a2      488d3d620f00.  lea rdi, str.15s            ; 0x200b ; "%15s" ; const char *format
 e8b2ffffff     call sym.imp.__isoc99_scanf ; int scanf(const char *format)
