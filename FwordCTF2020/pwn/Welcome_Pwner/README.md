@@ -36,10 +36,12 @@ Full RELRO      No canary found   NX enabled    PIE enabled     No RPATH   No RU
 ```
 
 Then use `ghidra`. This is `main`:
-img
+
+![main](img/screen_001.png)
 
 This is `vuln`:
-img
+
+![vuln](img/screen_002.png)
 
 by analyzing `vuln` we can desume a lot of things:
 
