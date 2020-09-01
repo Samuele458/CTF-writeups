@@ -8,9 +8,13 @@
 | [rgbCTF2020] | 11/07/2020 - 13/07/2020 |
 | [ChujowyCTF2020] | 15/07/2020 - 18/08/2020 |
 | [PoseidonCTF2020] | 08/08/2020 - 09/08/2020 |
+| [GoogleCTF2020] | 22/08/2020 - 23/08/2020 |
+| [FwordCTF2020] | 29/08/2020 - 30/08/2020 |
 
 
 [RedPwn2020]: <RedpwnCTF2020>
 [rgbCTF2020]: <rgbCTF2020>
 [ChujowyCTF2020]: <ChujowyCTF2020>
 [PoseidonCTF2020]: <PoseidonCTF2020>
+[GoogleCTF2020]: <GoogleCTF2020>
+[FwordCTF2020]: <FwordCTF2020>
