@@ -1,15 +1,27 @@
-import random
+import re
+import json
 
-flag = ""
+'''
+:param blob: blob of data to parse through (string)
+:param group_name: A single Group name ("Green", "Red", or "Yellow",etc...)
 
-res = [184, 161, 235, 97, 140, 111, 84, 182, 162, 135, 76, 10, 69, 246, 195, 152, 133, 88, 229, 104, 111, 22, 39]
-seeds = [9925, 8861, 5738, 1649, 2696, 6926, 1839, 7825, 6434, 9699, 227, 7379, 9024, 817, 4022, 7129, 1096, 4149, 6147, 2966, 1027, 4350, 4272]
+:return: A list of all user names that are part of a given Group
+'''
+def ParseNamesByGroup(blob, group_name):
+    users = []
+    field_lists = re.finditer(r'\[.*?\]', blob)
+    
+    for field_list in field_lists:
+        field = field_list.group(0)
+        field = "{"+field[1:len(field)-1]+"}"
 
-for i in range(0, len(seeds)):
-    random.seed(seeds[i])
-    rands = []
-    for j in range(0,4):
-        rands.append(random.randint(0,255))
-    flag += chr(rands[i%4] ^ res[i])
+        if json.loads(field)["Group"] == group_name:
+            users.append( str(json.loads(field)["user_name"]) )
+    return users
 
-print( flag )
+
+data = raw_input()
+group_name = data.split('|')[0]
+blob = data.split('|')[1]
+result_names_list = ParseNamesByGroup(blob, group_name)
+print result_names_list
